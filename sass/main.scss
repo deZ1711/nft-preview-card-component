@@ -1,8 +1,10 @@
 @import "./utils/variables";
 
 @import "base/base";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 @import "base/typography";
 
 @import "components/buttons";
 
 @import "layout/container";
+@import "layout/card";

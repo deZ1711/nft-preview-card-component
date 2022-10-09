@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  background: $darkblue-cardbg;
+  width: 330px;
+  height: auto;
+  &__img > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__title {
+
+  }
+  &__description {
+
+  }
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price {
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+      margin-top: -.11em;
+      margin-right: .2em;
+      background: url(../../images/icon-ethereum.svg) center center / contain no-repeat;
+    }
+  }
+  &__timerem {
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+      margin-top: -.11em;
+      margin-right: .2em;
+      background: url(../../images/icon-clock.svg) center center / contain no-repeat;
+    }
+  }
+  &__line {
+    content: '';
+    height: 1px;
+    background: $darkblue-line;
+  }
+  &__author {
+    vertical-align: middle;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url(../../images/image-avatar.png) center center / contain no-repeat;
+      vertical-align: middle;    
+      margin-top: -.11em;
+      margin-right: 1em;
+    }
+  }
+}
