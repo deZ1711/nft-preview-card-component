@@ -8,21 +8,41 @@
   background: $darkblue-cardbg;
   width: 330px;
   height: auto;
-  &__img > img {
+  &__img {
     width: 100%;
     border-radius: 10px;
+    &--overlay {
+      position: absolute;
+      opacity: 0;
+      background-color: $cyan;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+    }
+    &:hover .card__img--overlay {
+      opacity: 1;
+    }
   }
+  
   &__title {
-
+    font-size: 1.3rem;
+    color: $white;
+    &:hover {
+      color: $cyan;
+    }
   }
   &__description {
-
+    font-weight: 300;
+    font-size: 1rem;
+    color: $soft-blue;
   }
   &__infos {
     display: flex;
     justify-content: space-between;
   }
   &__price {
+    color: $cyan;
     &::before {
       content: '';
       display: inline-block;
@@ -35,6 +55,7 @@
     }
   }
   &__timerem {
+    color: $soft-blue;
     &::before {
       content: '';
       display: inline-block;
@@ -52,8 +73,12 @@
     background: $darkblue-line;
   }
   &__author {
+    color: $soft-blue;
+    font-weight: 300;
     vertical-align: middle;
     &::before {
+      border: 1px solid $white;
+      border-radius: 50px;
       content: '';
       display: inline-block;
       width: 30px;
@@ -62,6 +87,12 @@
       vertical-align: middle;    
       margin-top: -.11em;
       margin-right: 1em;
+    }
+    &--name {
+      color: $white;
+    &:hover {
+      color: $cyan;
+    }
     }
   }
 }
