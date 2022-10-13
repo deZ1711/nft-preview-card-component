@@ -10,16 +10,27 @@
   height: auto;
   &__img {
     width: 100%;
-    border-radius: 10px;
+    position: relative;
+    height: 290px;
+    &:hover .card__img--overlay {
+      opacity: 1;
+    }
+    & > img {
+      border-radius: 10px;
+      width: 100%;
+    }
     &--overlay {
       position: absolute;
+      inset: 0;
       opacity: 0;
-      background-color: $cyan;
-      width: 100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-    }
+      background-color: rgba(0, 255, 247, .4);
+      transition: opacity .3s ease;
+      border-radius: 10px;
+      & > img {
+        position: absolute;
+        inset: calc(50% - 24px) auto auto calc(50% - 24px);
+      }
+      }
     &:hover .card__img--overlay {
       opacity: 1;
     }
